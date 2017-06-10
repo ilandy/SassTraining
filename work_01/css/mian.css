@@ -1,0 +1,8 @@
+/* hello */
+#navi { width: 500px; list-style: none; }
+#navi > li { float: left; }
+#navi a { display: block; width: 100px; text-align: center; text-decoration: none; background: white; border: 1px solid #222; color: #222; }
+#navi a:hover { background: yellow; }
+#navi a.active { background: yellow; }
+
+/*# sourceMappingURL=mian.css.map */
