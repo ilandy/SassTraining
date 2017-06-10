@@ -1,0 +1,35 @@
+/* hello */
+$naviWidth: 500px;
+$buttonNum: 5;
+
+$mainColor: #222;
+$bgColor: white;
+$bgColorHover: yellow;
+$border: 1px solid $mainColor;
+
+
+#navi {
+	width: $naviWidth;
+	list-style: none;
+
+	> li {
+		float: left;
+	}
+	a {
+		display: block;
+		width: $naviWidth/$buttonNum;
+		text-align: center;
+		text-decoration: none;
+		background: $bgColor;
+		border: $border;
+		color: $mainColor;
+		&:hover {
+			background: $bgColorHover;
+		}
+		// a樣式 acive 狀況
+		&.active {
+			background: $bgColorHover;
+		}
+	}
+
+}

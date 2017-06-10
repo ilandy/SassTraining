@@ -1,0 +1,39 @@
+%btn {
+	display: inline-block;
+	text-decoration: none;
+}
+
+@mixin font-color($color,$size){
+	color: $color;
+	font-size: $size;
+}
+@function font-line-padding($size){
+	@return $size + 2px*2;
+};
+
+@mixin myBtn($color:red,$size:12px){
+	@extend %btn;
+	@include font-color($color,$size);
+};
+
+.btn-a {
+	// @extend %btn;
+	// @include font-color();
+	@include myBtn();
+	line-height: font-line-padding(12px);
+}
+.btn-b {
+	// @extend %btn;
+	// @include font-color(blue,16px);
+	@include myBtn(blue,16px);
+	line-height: font-line-padding(16px);
+
+}
+
+.btn-c {
+	// @extend %btn;
+	// @include font-color(gray,18px);
+	@include myBtn(gray,18px);
+	line-height: font-line-padding(18px);
+
+}
