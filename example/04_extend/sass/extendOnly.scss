@@ -1,0 +1,8 @@
+%button{
+	color:red;
+	display: block;
+	text-decoration: none;
+}
+.link{
+	@extend %button;
+}

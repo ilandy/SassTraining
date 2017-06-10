@@ -1,0 +1,17 @@
+@import "compass/reset";
+@import "breakpoint";
+body{
+	background: black;
+	@include breakpoint(480px){
+		background: blue;
+	}
+	@include breakpoint(768px){
+		background: red;
+	}
+	@include breakpoint(980px){
+		background: green;
+	}
+	@include breakpoint(1200px){
+		background: yellow;
+	}
+}

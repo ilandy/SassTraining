@@ -1,0 +1,22 @@
+@import "compass";
+%indent{
+	display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+$icon-layout: horizontal;
+//vertical, horizontal, diagonal, smart
+$icon-spacing: 10px;
+@import "icon/*.png";
+@include all-icon-sprites(true);
+
+[class*="icon"]{
+	@extend %indent;
+}
+
+// .fb{
+// 	@extend %indent;
+// 	@include icon-sprite(fb,true);
+// }

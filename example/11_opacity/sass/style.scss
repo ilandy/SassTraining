@@ -1,0 +1,19 @@
+@import "compass";
+.box{
+	width:100px;
+	height:100px;
+	margin:20px;
+	float: left;
+	background-color: black;
+}
+#o1{
+	@include opacity(0);
+  	//@include transparent;
+}
+#o2{
+	@include opacity(0.5);
+}
+#o3{
+	@include opacity(1);
+	//@include opaque;
+}

@@ -1,0 +1,25 @@
+@import "compass/reset";
+@import "compass";
+@import "susy";
+$susy: (
+ columns:16,
+ gutters:1/2,
+ gutter-position:split,
+ debug:(image:show) 
+);
+@include border-box-sizing;
+#wrap {
+  @include container();
+  max-width: 960px;
+  background-color: #f4f4f4;
+}
+@for $i from 1 through 16{
+  .grid-#{$i}{
+    @include span($i);
+    text-align: center;
+    height:100px;
+    line-height:100px;
+    margin-bottom: gutter();
+    background: rgba(black,0.5);
+  }
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+img { display: block; }
+
+#header h1 a { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; font-family: Microsoft JhengHei,微軟正黑體,monospace,sans-serif; font-size: 14px; line-height: 20px; }
+
+#wrap { max-width: 100%; margin-left: auto; margin-right: auto; box-shadow: 0px 3px 10px #369; }
+#wrap:after { content: " "; display: block; clear: both; }
+#wrap > div { max-width: 100%; margin-left: auto; margin-right: auto; }
+#wrap > div:after { content: " "; display: block; clear: both; }
+
+#header { text-align: center; }
+#header h1 { float: left; }
+#header h1 a { -moz-box-sizing: content-box; box-sizing: content-box; display: block; background-image: url('../images/logo.gif'); background-position: center; background-repeat: no-repeat; padding: 10px; width: 200px; height: 44px; }
+#header .menu { float: right; padding: 10px; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+#header .menu .icon { background-color: #369; width: 44px; height: 8.8px; margin: 8.8px 0; }
+#header .menu:before, #header .menu:after { background-color: #369; content: ''; display: block; width: 44px; height: 8.8px; }
+#header ul { display: none; border-top: 1px solid #369; border-left: 1px solid #369; background-color: #FFF; width: 100%; float: left; }
+#header ul li { border-bottom: 1px solid #369; border-right: 1px solid #369; width: 100%; float: left; }
+#header ul li a { display: block; text-align: center; color: #369; line-height: 40px; height: 40px; text-decoration: none; font-weight: bolder; }
+#header ul li a:hover { color: #FFF; background-color: #369; }
+#header.active .menu .icon { background: transparent; }
+#header.active .menu:before { -moz-transform: translateY(17.6px) rotate(45deg); -ms-transform: translateY(17.6px) rotate(45deg); -webkit-transform: translateY(17.6px) rotate(45deg); transform: translateY(17.6px) rotate(45deg); }
+#header.active .menu:after { -moz-transform: translateY(-17.6px) rotate(-45deg); -ms-transform: translateY(-17.6px) rotate(-45deg); -webkit-transform: translateY(-17.6px) rotate(-45deg); transform: translateY(-17.6px) rotate(-45deg); }
+#header.active ul { display: block; }
+
+#footer { line-height: 40px; height: 40px; color: #369; }
+#footer p { text-align: center; }
+
+@media (min-width: 768px) { #header ul li { width: 50%; float: left; } }
+@media (min-width: 980px) { #wrap { width: 960px; margin-left: auto; margin-right: auto; }
+  #wrap:after { content: " "; display: block; clear: both; }
+  #wrap > div { width: 960px; margin-left: auto; margin-right: auto; }
+  #wrap > div:after { content: " "; display: block; clear: both; }
+  #header .menu { display: none; }
+  #header ul { float: right; display: block; border: none; width: auto; }
+  #header ul li { border: none; width: auto; }
+  #header ul li a { -moz-box-sizing: content-box; box-sizing: content-box; height: 44px; line-height: 44px; padding: 10px 20px; } }
+#about { padding: 10px 0; }
+#about ul { width: 100%; float: left; }
+#about ul li { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+#about ul li a { display: block; text-decoration: none; text-align: center; border: 1px solid #369; margin: 10px auto; }
+#about ul li a div { width: 60px; height: 60px; line-height: 60px; margin: 20px auto; font-size: 30px; color: #FFF; background-color: #369; border-radius: 30px; }
+#about ul li a h2 { font-weight: bolder; color: #369; margin: 20px auto; }
+#about ul li a:hover { background-color: #369; }
+#about ul li a:hover div { color: #369; background-color: #FFF; }
+#about ul li a:hover h2 { color: #FFF; }
+
+#class { padding: 10px 0; background-color: #369; color: #FFF; }
+#class .content { margin: 10px auto; width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+#class .content h3 { font-size: 16px; font-weight: bolder; text-align: center; margin: 20px auto; }
+#class .content div { background-color: #FFF; color: #369; overflow: hidden; border: 10px solid #FFF; font-size: 12px; }
+
+@media (min-width: 768px) { #about ul li { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  #class .content { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; } }
+@media (min-width: 980px) { #about ul li { width: 220px; float: left; margin-left: 10px; margin-right: 10px; }
+  #class .content { width: 300px; float: left; margin-left: 10px; margin-right: 10px; } }
+
+/*# sourceMappingURL=style.css.map */

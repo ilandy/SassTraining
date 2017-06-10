@@ -1,0 +1,20 @@
+/* line 1, ../sass/style-sass.sass */
+#navi {
+  width: 500px;
+  list-style: none;
+}
+/* line 4, ../sass/style-sass.sass */
+#navi li {
+  float: left;
+}
+/* line 6, ../sass/style-sass.sass */
+#navi li a {
+  box-sizing: border-box;
+  display: block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #222;
+  color: #222;
+}

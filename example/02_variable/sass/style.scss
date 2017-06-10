@@ -1,0 +1,28 @@
+$naviWidth: 500px;
+$buttonNum: 5;
+$color: #222;
+$bgColor: #fff;
+$bgColorHover: #ddd;
+$border: 1px solid $color;
+
+#navi{
+	width: $naviWidth;
+	list-style: none;
+	li{
+		float: left;
+		a{
+			box-sizing: border-box;
+			display: block;
+			width: $naviWidth / $buttonNum;
+			text-align: center;
+			text-decoration: none;
+			background-color: $bgColor;
+			border: $border;
+			color: $color;
+			&:hover{
+				color: $bgColor;
+				background-color: $bgColorHover;
+			}
+		}
+	}
+}

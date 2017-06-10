@@ -1,0 +1,164 @@
+@import "reset";
+@import "util";
+
+html{
+	*,*:after,*:before{
+		@include adjust-font-size-to ($base-font-size);
+		color: $mainColor;
+		font-family:"Microsoft JhengHei","Apple LiGothic Medium","PMingLiU";
+	}
+	background-color: $lightColor;
+}
+html,body{
+	width:100%;
+	height:100%;
+	min-width: $pageWidth;
+}
+#wrap{
+	width: 100%;
+}
+header{
+	height: image-height("logo.gif");
+	border-bottom: $border;
+	text-align: center;
+	background-color: $lightColor;
+	width: 100%;
+	min-width: 320px;
+	h1{
+		float: left;
+		a{
+			@include image-block("logo.gif",true);
+		}
+	}
+}
+#menuBtn {
+    z-index: 99;
+    position: absolute;
+    display: none;
+    top: rhythm(1);
+    left: gutter(24);
+    padding: rhythm(1);
+    @include user-select(none);
+    span {
+        background-color: $mainColor;
+        width: rhythm(3);
+        height: rhythm(.3);
+        margin: rhythm(.6) 0;
+        @extend %indent;
+    }
+    &:before,
+    &:after {
+        background-color: $mainColor;
+        content: '';
+        display: block;
+        width: rhythm(3);
+        height: rhythm(.3);
+    }
+    .active & {
+        span {
+            background-color: transparent;
+        }
+        &:before {
+            @include transform(translateY(rhythm(.9)) rotate(45deg));
+        }
+        &:after {
+            @include transform(translateY(-1 * rhythm(.9)) rotate(-45deg));
+        }
+    }
+}
+nav{
+	float: right;
+	margin-right: rhythm(2);
+	li{
+		float: left;
+		position: relative;
+		a{
+			position: relative;
+			z-index: 2;
+			padding: 0 rhythm(4);
+			text-decoration: none;
+			height: image-height("logo.gif");
+			line-height: image-height("logo.gif");
+		}
+		&:before{
+			width: 100%;
+			height: 100%;
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			background-color: $lightColor;
+			@include transform(skew(-30deg));
+		}
+		& + li{
+			&:before{
+				border-left: $border;
+			}
+		}
+		&:hover{
+			a{
+				color:$lightColor;
+			}
+			&:before{
+				background-color: $mainColor;
+			}
+		}
+	}
+}
+footer{
+	border-top: $border;
+	padding: rhythm(2); 
+	text-align: center;
+}
+@include breakpoint(0){
+	html,body{
+		min-width: 320px;
+	}
+}
+@include breakpoint(max-width 980px){
+	body.active{
+		overflow: hidden;
+		#wrap{
+			position: absolute;
+			left: 200px;
+		}
+		nav{
+			left:0;
+		}
+
+	}
+	#wrap{
+		padding-top: image-height("logo.gif");
+	}
+	header{
+		position: fixed;
+		top: 0;
+		h1{
+			float: none;
+			display: inline-block;
+		}
+	}
+	#menuBtn {
+	    display: block;
+	}
+	nav{
+		position: fixed;
+		top:0;
+		left:-200px;
+		width: 200px;
+		height: 100%;
+		overflow-y:auto; 
+		background-color: $mainColor;
+		li{
+			width: 100%;
+			a{
+				width: 100%;
+				padding: 0 ;
+				color: $lightColor;
+			}
+			&:before{
+				display: none;
+			}
+		}
+	}
+};

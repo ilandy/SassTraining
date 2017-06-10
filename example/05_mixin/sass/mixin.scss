@@ -1,0 +1,16 @@
+@mixin color-font($color:black,$size:12px) {
+	font-size: $size;
+	color: $color;
+}
+.normal{
+	@include color-font();
+}
+.red{
+	@include color-font(red);
+}
+.blue{
+	@include color-font(blue,14px);
+}
+.green{
+	@include color-font(green,16px);
+}

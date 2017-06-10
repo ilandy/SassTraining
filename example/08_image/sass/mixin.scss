@@ -1,0 +1,19 @@
+@import "compass";
+%indent{
+	display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@mixin image-block($path,$cache:false){
+	@extend %indent;
+	background-image: image-url($path,false,$cache);
+	width: image-width($path);
+	height: image-height($path);
+} 
+h1 > a{
+	@include image-block("logo.gif");
+}
+div{
+	@include image-block("banner.jpg");
+}

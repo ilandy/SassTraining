@@ -1,0 +1,49 @@
+[class*="icon"] {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.icon-sprite, .icon-bfb, .icon-bgp, .icon-btw, .icon-fb, .icon-gp, .icon-tw {
+  background-image: url('../images/icon-s4b2ae91330.png');
+  background-repeat: no-repeat;
+}
+
+.icon-bfb {
+  background-position: 0 0;
+  height: 64px;
+  width: 64px;
+}
+
+.icon-bgp {
+  background-position: -74px 0;
+  height: 64px;
+  width: 64px;
+}
+
+.icon-btw {
+  background-position: -148px 0;
+  height: 64px;
+  width: 64px;
+}
+
+.icon-fb {
+  background-position: -222px 0;
+  height: 32px;
+  width: 32px;
+}
+
+.icon-gp {
+  background-position: -264px 0;
+  height: 32px;
+  width: 32px;
+}
+
+.icon-tw {
+  background-position: -306px 0;
+  height: 32px;
+  width: 32px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+@mixin color-font($color:black,$size:12px) {
+	font-size: $size;
+	color: $color;
+	line-height: font-line-px($size);
+}
+
+@function font-line-px($size:12px){
+	@return $size + 4px;
+}
+.normal{
+	@include color-font();
+	height: font-line-px();
+}
+.red{
+	@include color-font(red);
+	height: font-line-px();
+}
+.blue{
+	@include color-font(blue,14px);
+	height: font-line-px(14px);
+}
+.green{
+	@include color-font(green,16px);
+	height: font-line-px(16px);
+}

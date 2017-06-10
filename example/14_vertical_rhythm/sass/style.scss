@@ -1,0 +1,36 @@
+@import "compass/reset";
+@import "compass";
+@import 'susy';
+
+$font-list: 14px 16px 20px 24px 36px 48px;
+
+$base-font-size: nth($font-list,1);  
+$base-line-height: 10px;
+$min-line-padding: 2px;
+$rhythm-unit: 'px'; 
+$susy: (
+	debug:(image:show) 
+);
+html{
+	@include adjust-font-size-to ($base-font-size);
+}
+#wrap {
+	@include container();
+}
+h1{
+	@include adjust-font-size-to (nth($font-list,6));
+	@include leader(1);//padding-leader
+}
+h2{
+	@include adjust-font-size-to (nth($font-list,5));
+	@include rhythm(0,1,1,0);
+}
+h3{
+	@include adjust-font-size-to (nth($font-list,4));
+	@include trailer(1);//padding-trailer
+}
+p{
+	@include adjust-leading-to(4);
+	height: rhythm(4);
+	margin: rhythm(1);
+}

@@ -1,0 +1,105 @@
+@import "util";
+
+#about,#class{
+	@extend %block;
+	padding: rhythm(2) 0;
+}
+#about{
+	>div{
+		margin: rhythm(1) 0; 
+		@include span(24 nest);
+		>img{
+			@include span(12);
+		}
+		>section{
+			@include span(12);
+			>h3{
+				@include adjust-font-size-to(nth($font-list,3));
+				margin: rhythm(1) 0; 
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+		&:nth-child(even){
+			>img{
+				@include span(12 last);
+			}
+		}
+	}
+}
+#class{
+	padding: rhythm(1) 0;
+	.content{
+		background-color: $mainColor;
+		margin: rhythm(1) auto;
+		@include span(6);
+		h3{
+			font-size: 16px;
+			font-weight: bolder;
+			text-align: center;
+			margin: rhythm(1) * 2 auto;
+			color:$lightColor;
+		}
+		div{
+			@include span(6 of 6);
+			background-color: $lightColor;
+			color:$mainColor;
+			overflow: hidden;
+			border: rhythm(1) solid $lightColor;
+			height: rhythm(10);
+			@include box-sizing(border-box);
+			margin-bottom: rhythm(1);
+			font-size: 12px;
+		}
+	}
+}
+@include breakpoint(max-width 980px){
+	#about{
+		>div{
+			>img{
+				@include span(8);
+			}
+			>section{
+				@include span(16);
+			}
+			&:nth-child(even){
+				>img{
+					@include span(8 last);
+				}
+			}
+		}
+	}
+	#class{
+		.content{
+			@include span(12);
+		}
+	}
+
+};
+@include breakpoint(max-width 720px){
+	#about{
+		>div{
+			>img{
+				@include span(24);
+			}
+			>section{
+				@include span(24);
+			}
+			&:nth-child(even){
+				>img{
+					@include span(24);
+				}
+			}
+		}
+	}
+	#class{
+		.content{
+			@include span(24);
+			div{
+				height: auto;
+			}
+		}
+	}
+
+};

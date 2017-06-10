@@ -1,0 +1,17 @@
+#navi{
+	width: 500px;
+	list-style: none;
+	li{
+		float: left;
+		a{
+			box-sizing: border-box;
+			display: block;
+			width: 100px;
+			text-align: center;
+			text-decoration: none;
+			background-color: #fff;
+			border: 1px solid #222;
+			color: #222;
+		}
+	}
+}

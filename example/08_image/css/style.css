@@ -1,0 +1,23 @@
+/* line 3, ../sass/style.scss */
+h1 > a, div {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 16, ../sass/style.scss */
+h1 > a {
+  background-image: url('/images/logo.gif');
+  width: 200px;
+  height: 44px;
+}
+
+/* line 19, ../sass/style.scss */
+div {
+  background-image: url('/images/banner.jpg');
+  width: 960px;
+  height: 400px;
+}
+
+/*# sourceMappingURL=style.css.map */

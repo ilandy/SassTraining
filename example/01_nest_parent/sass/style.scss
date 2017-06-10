@@ -1,0 +1,23 @@
+/* 使用巢狀結構產生樣式 */
+#navi{
+	width: 500px;
+	list-style: none;
+	li{
+		float: left;
+		a{
+			box-sizing: border-box;
+			display: block;
+			width: 100px;
+			text-align: center;
+			text-decoration: none;
+			background-color: #fff;
+			border: 1px solid #222;
+			color: #222;
+			&:hover{
+				color: #fff;
+				background-color: #ddd;
+				// 在巢狀結構中使用父級選擇器&符號產生對應樣式
+			}
+		}
+	}
+}
