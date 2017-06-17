@@ -1,9 +1,17 @@
+
 %btn {
 	display: inline-block;
 	text-decoration: none;
 	@media (max-width: 980px){ 
 		display: inline;
 	}
+}
+
+%indent {
+	display: block;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 @mixin font-color($color:red,$size:12px){
@@ -46,4 +54,18 @@
 		@include font-color();
 		line-height: font-line-padding(12px);
 	}
+}
+
+$ilandy-layout: horizotal;
+$ilandy-space: 10px;
+@import "ilandy/*.png";
+// @include all-ilandy-sprites(true);
+
+[class*="ilandy"] {
+	@extend %indent;
+}
+
+.icon-fb {
+	@extend %indent;
+	@include ilandy-sprite(fb,true);
 }

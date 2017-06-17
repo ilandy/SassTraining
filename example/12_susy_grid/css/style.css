@@ -81,7 +81,6 @@ html, body {
   background-position: left top;
   border: 1px solid black;
   height: 250px;
-  clear: both;
 }
 .inner:after {
   content: " ";
@@ -89,7 +88,7 @@ html, body {
   clear: both;
 }
 
-.span1, .span2, .span3 {
+.span1, .span2, .span3, .span4, .span1-right, .span2-right, .span3-right, .span2-center, .span1in3, .span3Outer {
   height: 250px;
   background: green;
 }
@@ -113,6 +112,55 @@ html, body {
   float: left;
   margin-left: 2.5%;
   margin-right: 2.5%;
+}
+
+.span4 {
+  width: 95%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.span1-right {
+  width: 20%;
+  float: right;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.span2-right {
+  width: 45%;
+  float: right;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.span3-right {
+  width: 70%;
+  float: right;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.span2-center {
+  width: 45%;
+  float: left;
+  margin-left: 27.5%;
+  margin-right: -100%;
+}
+
+.span1in3 {
+  width: 26.66667%;
+  float: left;
+  margin-left: 3.33333%;
+  margin-right: 3.33333%;
+  background: red;
+}
+
+.span3Outer {
+  width: 75%;
+  float: left;
+  background: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

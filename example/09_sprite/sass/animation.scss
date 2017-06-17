@@ -1,0 +1,18 @@
+@import "compass";
+@include keyframes(alex) {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+};
+$default-animation-name: alex;
+$default-animation-duration: 0.5s;
+
+
+div{
+	@include animation-name();
+	@include animation-duration(1s);
+	// animation-duration: 1s;
+}

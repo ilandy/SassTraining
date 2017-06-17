@@ -1,0 +1,34 @@
+@-moz-keyframes alex {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes alex {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes alex {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+div {
+  -moz-animation-name: alex;
+  -webkit-animation-name: alex;
+  animation-name: alex;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/*# sourceMappingURL=animation.css.map */

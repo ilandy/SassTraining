@@ -16,7 +16,10 @@ $icon-spacing: 10px;
 	@extend %indent;
 }
 
-// .fb{
-// 	@extend %indent;
-// 	@include icon-sprite(fb,true);
-// }
+.fb{
+	@extend %indent;
+	@include icon-sprite(fb,true);
+}
+
+
+

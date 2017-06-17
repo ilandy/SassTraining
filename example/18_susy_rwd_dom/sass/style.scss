@@ -20,71 +20,72 @@ main{
 		@include box-sizing(border-box);
 		margin: gutter() auto;
 	}
-	div{
+
+	div {
 		@include span(12);
 	}
-	aside{
+	aside {
 		@include span(6);
 	}
-	.M{
-		background-color: #F00;
+	.M {
+		background: #f00;
+
 	}
-	.A1{
-		background-color: #0F0
+	.A1 {
+		background: #0f0;
 	}
-	.A2{
-		background-color: #00F;
+	.A2 {
+		background: #00f;
+
 	}
+	// div{
+	// 	@include span(12);
+	// }
+	// aside{
+	// 	@include span(6);
+	// }
+	// .M{
+	// 	background-color: #F00;
+	// }
+	// .A1{
+	// 	background-color: #0F0
+	// }
+	// .A2{
+	// 	background-color: #00F;
+	// }
 }
-.MA2A1{
-	.A1{
+
+.MA2A1 {
+	.A1 {
 		float: right;
 	}
 }
-.A1MA2{
-	.M{
-		margin-left: span(6) + gutter() * 3;
-		margin-right: -100%
+.A1A2M {
+	.M {
+		float: right;	
 	}
-	.A2{
+}
+.A2A1M {
+	.A1, .M {
 		float: right;
 	}
 }
-.A1A2M{
-	.M{
+
+.A1MA2 {
+	.M {
+		margin-left: span(6) + gutter()*3;
+		margin-right: -100%;
+	}
+	.A2 {
 		float: right;
 	}
 }
-.A2MA1{
-	.M{
-		margin-left: span(6) + gutter() * 3;
-		margin-right: -100%
+.A2MA1 {
+	.M {
+		margin-left: span(6) + gutter()*3;
+		margin-right: -100%;
 	}
-	.A1{
+	.A1 {
 		float: right;
-	}
-}
-.A2A1M{
-	.M,.A1{
-		float: right;
-	}
-}
-@include breakpoint(max-width 980px){
-	main{
-		.M{
-			@include span(24);
-			margin-left: gutter() !important;
-			margin-right: gutter() !important;
-		}
-		.A1,.A2{
-			@include span(12);
-		}
-	}
-}
-@include breakpoint(max-width 720px){
-	main{
-		.A1,.A2{
-			@include span(24);
-		}
 	}
 }

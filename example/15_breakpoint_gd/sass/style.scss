@@ -1,17 +1,39 @@
-@import "compass/reset";
+// @import "compass/reset";
 @import "breakpoint";
-body{
+
+$pc: max-width 1200px;
+$bigPad: max-width 980px;
+$pad: max-width 768px;
+$mobile: max-width 480px;
+
+body {
 	background: black;
-	@include breakpoint(980px 1200px){
-		background: blue;
+	@include breakpoint($pc) {
+			background: blue;
 	}
-	@include breakpoint(768px 980px){
-		background: red;
-	}
-	@include breakpoint(480px 768px){
-		background: green;
-	}
-	@include breakpoint(max-width 480px){
-		background: yellow;
-	}
+	@include breakpoint($bigPad) {
+			background: red;
+	};
+	@include breakpoint($pad) {
+			background: green;
+	};
+	@include breakpoint($mobile) {
+			background: yellow;
+	};
 }
+h1 {
+	color: black;
+	@include breakpoint($pc) {
+			color: blue;
+	}
+	@include breakpoint($bigPad) {
+			color: red;
+	};
+	@include breakpoint($pad) {
+			color: green;
+	};
+	@include breakpoint($mobile) {
+			color: yellow;
+	};
+}
+

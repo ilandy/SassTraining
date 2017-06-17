@@ -10,16 +10,16 @@ $susy: (
 @include border-box-sizing;
 #wrap {
   @include container();
-  max-width: 960px;
-  background-color: #f4f4f4;
+  min-width: 960px;
+  background: #f4f4f4;
 }
-@for $i from 1 through 12{
-  .grid-#{$i}{
+@for $i from 1 through 12 {
+  .col-#{$i} {
     @include span($i);
     text-align: center;
-    height:100px;
-    line-height:100px;
-    margin-bottom: gutter();
-    background: rgba(black,0.5);
+    height: span($i);
+    line-height: span($i);
+    background: rgba(black,.5);
+    color: lighten(black,20%)
   }
-}
+};

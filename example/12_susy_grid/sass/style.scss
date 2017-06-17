@@ -12,26 +12,40 @@ html,body{
 #wrap{
 	min-height: 100%;
 }
-.inner{
+.inner {
 	margin: 20px 0;
 	@include container();
 	border: 1px solid black;
-	height:250px;
-	@include break;
+	height: 250px;
 }
-%span{
-	height:250px;
-	background:green;
+%span {
+	height: 250px;
+	background: green;
 }
-.span1{
+
+@for $i from 1 through 4 { 
+	.span#{$i} {
+		@extend %span;
+		@include span($i);
+	}
+}
+@for $i from 1 through 3 { 
+	.span#{$i}-right {
+		@extend %span;
+		@include span($i last);
+	}
+}
+.span2-center {
 	@extend %span;
-	@include span(1);
+	@include span(isolate 2 at 2);
 }
-.span2{
+.span1in3 {
 	@extend %span;
-	@include span(2);
+	@include span(1 of 3);
+	background: red;
 }
-.span3{
+.span3Outer {
 	@extend %span;
-	@include span(3);
+	@include span(3 nest);
+	background: blue;
 }

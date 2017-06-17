@@ -1,105 +1,105 @@
 @import "util";
 
-#about,#class{
+#about, #class {
 	@extend %block;
 	padding: rhythm(2) 0;
 }
-#about{
-	>div{
-		margin: rhythm(1) 0; 
+#about {
+	
+	> div {
 		@include span(24 nest);
-		>img{
+		margin-top: rhythm(1);
+		margin-bottom: rhythm(1);
+		> img {
 			@include span(12);
 		}
-		>section{
+		> section {
 			@include span(12);
-			>h3{
-				@include adjust-font-size-to(nth($font-list,3));
-				margin: rhythm(1) 0; 
-				overflow: hidden;
-				white-space: nowrap;
-				text-overflow: ellipsis;
+			> h3 {
+				@include adjust-font-size-to(nth($font-list, 3) );
 			}
+			
 		}
-		&:nth-child(even){
-			>img{
-				@include span(12 last);
+		&:nth-child(even) {
+			> img {
+				float: right;
 			}
 		}
 	}
+
 }
-#class{
-	padding: rhythm(1) 0;
-	.content{
-		background-color: $mainColor;
-		margin: rhythm(1) auto;
-		@include span(6);
-		h3{
-			font-size: 16px;
-			font-weight: bolder;
+
+#class {
+	> .content {
+			@include span(6);
+			margin-top: rhythm(1);
+			margin-bottom: rhythm(1);
+			background: $mainColor;
+		h3 {
+			font-size: adjust-font-size-to(nth($font-list, 2) );
+			color: $lightColor;
+			margin: rhythm(1)*2 auto;
 			text-align: center;
-			margin: rhythm(1) * 2 auto;
-			color:$lightColor;
 		}
-		div{
+		div {
 			@include span(6 of 6);
-			background-color: $lightColor;
-			color:$mainColor;
+			background: $lightColor;
+			margin-bottom: 	gutter(6);
+			@include box-sizing(border-box);
+			height: rhythm(10);
 			overflow: hidden;
 			border: rhythm(1) solid $lightColor;
-			height: rhythm(10);
-			@include box-sizing(border-box);
-			margin-bottom: rhythm(1);
-			font-size: 12px;
 		}
 	}
 }
-@include breakpoint(max-width 980px){
-	#about{
-		>div{
-			>img{
+
+@include breakpoint(max-width 980px) {
+	#about {
+	
+	> div {
+			> img {
 				@include span(8);
 			}
-			>section{
+			> section {
 				@include span(16);
 			}
-			&:nth-child(even){
-				>img{
-					@include span(8 last);
-				}
+		}
+
+	}
+	#class {
+		> .content {
+				@include span(12);
+			h3 {
+			}
+			div {
+				@include span(12 of 12);
+
 			}
 		}
 	}
-	#class{
-		.content{
-			@include span(12);
-		}
-	}
-
 };
-@include breakpoint(max-width 720px){
-	#about{
-		>div{
-			>img{
+@include breakpoint(max-width 720px) {
+	#about {
+	
+		> div {
+			> img {
 				@include span(24);
 			}
-			>section{
+			> section {
 				@include span(24);
 			}
-			&:nth-child(even){
-				>img{
-					@include span(24);
-				}
-			}
 		}
-	}
-	#class{
-		.content{
-			@include span(24);
-			div{
-				height: auto;
-			}
-		}
-	}
 
+	}
+	#class {
+		> .content {
+				@include span(24);
+			h3 {
+			}
+			div {
+				@include span(24);
+
+			}
+		}
+	}
 };

@@ -3,25 +3,23 @@
 
 #about, #class { padding: 20px 0; }
 
-#about > div { margin: 10px 0; width: 100%; float: left; }
+#about > div { width: 100%; float: left; margin-top: 10px; margin-bottom: 10px; }
 #about > div > img { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
 #about > div > section { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
-#about > div > section > h3 { font-size: 30px; line-height: 40px; margin: 10px 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-#about > div:nth-child(even) > img { width: 47.91667%; float: right; margin-left: 1.04167%; margin-right: 1.04167%; }
+#about > div > section > h3 { font-size: 30px; line-height: 40px; }
+#about > div:nth-child(even) > img { float: right; }
 
-#class { padding: 10px 0; }
-#class .content { background-color: #369; margin: 10px auto; width: 22.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
-#class .content h3 { font-size: 16px; font-weight: bolder; text-align: center; margin: 20px auto; color: #FFF; }
-#class .content div { width: 91.66667%; float: left; margin-left: 4.16667%; margin-right: 4.16667%; background-color: #FFF; color: #369; overflow: hidden; border: 10px solid #FFF; height: 100px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin-bottom: 10px; font-size: 12px; }
+#class > .content { width: 22.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; margin-top: 10px; margin-bottom: 10px; background: #369; }
+#class > .content h3 { font-size: adjust-font-size-to(16px); color: #FFF; margin: 20px auto; text-align: center; }
+#class > .content div { width: 91.66667%; float: left; margin-left: 4.16667%; margin-right: 4.16667%; background: #FFF; margin-bottom: 4.16667%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; height: 100px; overflow: hidden; border: 10px solid #FFF; }
 
 @media (max-width: 980px) { #about > div > img { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
   #about > div > section { width: 64.58333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
-  #about > div:nth-child(even) > img { width: 31.25%; float: right; margin-left: 1.04167%; margin-right: 1.04167%; }
-  #class .content { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; } }
+  #class > .content { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  #class > .content div { width: 95.83333%; float: left; margin-left: 2.08333%; margin-right: 2.08333%; } }
 @media (max-width: 720px) { #about > div > img { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
   #about > div > section { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
-  #about > div:nth-child(even) > img { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
-  #class .content { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
-  #class .content div { height: auto; } }
+  #class > .content { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  #class > .content div { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; } }
 
 /*# sourceMappingURL=index.css.map */

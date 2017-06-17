@@ -1,11 +1,11 @@
-[class*="icon"] {
+[class*="icon"], .fb {
   display: block;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.icon-sprite, .icon-bfb, .icon-bgp, .icon-btw, .icon-fb, .icon-gp, .icon-tw {
+.icon-sprite, .icon-bfb, .icon-bgp, .icon-btw, .icon-fb, .icon-gp, .icon-tw, .fb {
   background-image: url('../images/icon-s4b2ae91330.png');
   background-repeat: no-repeat;
 }
@@ -42,6 +42,12 @@
 
 .icon-tw {
   background-position: -306px 0;
+  height: 32px;
+  width: 32px;
+}
+
+.fb {
+  background-position: -222px 0;
   height: 32px;
   width: 32px;
 }

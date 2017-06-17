@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
 html { line-height: 1; }
@@ -16,12 +15,14 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-img { display: block; }
+img { display: block; border: none; }
 
 header h1 a, #menuBtn span { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
-html, body { width: 100%; height: 100%; min-width: 320px; min-width: 960px \9; font-family: Microsoft JhengHei,微軟正黑體,monospace,sans-serif; background-color: #FFF; }
-html *, html *:after, html *:before, body *, body *:after, body *:before { font-size: 14px; line-height: 20px; color: #369; }
+html { background-color: #FFF; }
+html *, html *:after, html *:before { font-size: 14px; line-height: 20px; color: #369; font-family: "Microsoft JhengHei","Apple LiGothic Medium","PMingLiU"; }
+
+html, body { width: 100%; height: 100%; min-width: 960px; }
 
 #wrap { width: 100%; }
 
@@ -46,6 +47,7 @@ nav li:hover:before { background-color: #369; }
 
 footer { border-top: 1px solid #369; padding: 20px; text-align: center; }
 
+@media (min-width: 0) { html, body { min-width: 320px; } }
 @media (max-width: 980px) { body.active { overflow: hidden; }
   body.active #wrap { position: absolute; left: 200px; }
   body.active nav { left: 0; }
